@@ -43,6 +43,10 @@
   .lang button{font:600 .75rem var(--sans);letter-spacing:.04em;border:0;background:none;color:var(--muted);padding:5px 10px;border-radius:999px;cursor:pointer}
   html[data-lang="mn"] .lang [data-set="mn"], html[data-lang="en"] .lang [data-set="en"]{background:var(--ink);color:var(--bg)}
 
+  .avatar{width:112px;height:112px;border-radius:50%;object-fit:cover;display:block;margin-bottom:28px;border:1px solid var(--line);box-shadow:0 0 0 6px var(--card),0 12px 32px -12px rgba(0,0,0,.25)}
+  .aboutgrid{display:grid;grid-template-columns:260px 1fr;gap:36px;align-items:start}
+  .photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:60% 30%;border-radius:16px;border:1px solid var(--line);display:block}
+  .photo-cap{font-size:.78rem;color:var(--faint);margin-top:10px}
   /* hero */
   header{padding:112px 0 88px}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
@@ -121,6 +125,9 @@
     .step+.step::before{content:"↓";left:22px;top:-11px}
     .job{grid-template-columns:1fr;gap:6px}
     .edu{flex-direction:column}
+    .aboutgrid{grid-template-columns:1fr;gap:24px}
+    .photo{aspect-ratio:1/1}
+    .avatar{width:92px;height:92px}
     .edu .meta{text-align:left}
   }
 </style>
@@ -145,6 +152,7 @@
 <main class="wrap">
 
   <header>
+    <img src="profile.jpg" alt="Ганцогт Загдсүрэн" class="avatar" width="112" height="112">
     <span class="eyebrow"><span lang="mn">Шинэ боломжид нээлттэй</span><span lang="en">Open to new opportunities</span></span>
     <h1>
       <span lang="mn">Ганцогт</span><span lang="en">Gantsogt</span>
@@ -167,11 +175,19 @@
       <span lang="en">“There is no perfect program. Learning from mistakes and constantly searching for the simple, right solution — that is what perfection really is.”</span>
     </blockquote>
 
-    <p lang="mn">Би мэдээлэл боловсруулахыг <span class="ink">үйлдвэрийн машин бүтээхтэй</span> адилтгадаг: түүхий өгөгдлийг цэвэрлэж, боловсруулан, шийдвэр гаргахад хэрэгтэй тайлан болгодог. Өгөгдөлд тохирсон бүтэц, багажийг сонгож, системийг байнга сайжруулж байх ёстой гэж үздэг.</p>
-    <p lang="en">I see data processing as <span class="ink">building a factory machine</span>: raw data goes in, gets cleaned and processed, and comes out as a report that supports real decisions. I believe in choosing the right structure and tools for the data — and in improving the system continuously.</p>
+    <div class="aboutgrid">
+      <figure>
+        <img src="working.jpg" alt="Ганцогт ажиллаж байгаа нь" class="photo" loading="lazy">
+        <figcaption class="photo-cap"><span lang="mn">Ажлын үеэр</span><span lang="en">At work</span></figcaption>
+      </figure>
+      <div>
+        <p lang="mn">Би мэдээлэл боловсруулахыг <span class="ink">үйлдвэрийн машин бүтээхтэй</span> адилтгадаг: түүхий өгөгдлийг цэвэрлэж, боловсруулан, шийдвэр гаргахад хэрэгтэй тайлан болгодог. Өгөгдөлд тохирсон бүтэц, багажийг сонгож, системийг байнга сайжруулж байх ёстой гэж үздэг.</p>
+        <p lang="en">I see data processing as <span class="ink">building a factory machine</span>: raw data goes in, gets cleaned and processed, and comes out as a report that supports real decisions. I believe in choosing the right structure and tools for the data — and in improving the system continuously.</p>
 
-    <p lang="mn">Өгөгдлийн бүтэц, алгоритмд дуртай бөгөөд кибер аюулгүй байдал, Linux (Arch), график дизайныг сонирхон судалдаг. Хариуцлагатай, сахилга баттай, багаар ажиллах чадвартай.</p>
-    <p lang="en">I love data structures and algorithms, and spend my free time exploring cybersecurity, Linux (Arch) and graphic design. Responsible, disciplined, and a strong team player.</p>
+        <p lang="mn">Өгөгдлийн бүтэц, алгоритмд дуртай бөгөөд кибер аюулгүй байдал, Linux (Arch), график дизайныг сонирхон судалдаг. Хариуцлагатай, сахилга баттай, багаар ажиллах чадвартай.</p>
+        <p lang="en">I love data structures and algorithms, and spend my free time exploring cybersecurity, Linux (Arch) and graphic design. Responsible, disciplined, and a strong team player.</p>
+      </div>
+    </div>
 
     <div class="pipe" style="margin-top:40px">
       <div class="step">
